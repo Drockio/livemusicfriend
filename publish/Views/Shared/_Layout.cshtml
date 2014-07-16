@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - LiveMusicFriend - Local Live Music</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+        @Styles.Render("~/Content/bootstrap/css", "~/Content/css")
+        @Scripts.Render("~/bundles/modernizr", "~/Content/bootstrap/js", "~/bundles/jquery", "~/bundles/jqueryui")
+    </head>
+    <body>
+        <div class="container-fluid outter">
+        <header>
+            <div class="row-fluid bglight">
+                <div class="span4">
+                    <p class="site-title">
+                    @Html.ActionLink("Live Music Friend", "Index", "Home")</p>
+                </div>
+                <div class="offset3 span5">
+@*                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>*@
+                    <nav>
+                        <ul id="menu">
+                            <li>@Html.ActionLink("Home", "Index")</li>
+                            <li>@Html.ActionLink("About", "About")</li>
+                            <li>@Html.ActionLink("Contact", "Contact")</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <div id="crowd_banner" class="bglight"></div>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <div class="span3 center text-center">
+            <p class="white"><a href="http://developer-derek.com">&copy; @DateTime.Now.Year - Developer-Derek</a></p>
+            <p class="gray">Powered By:</p>
+            <a href="http://www.JamBase.com" target="_top" title="JamBase Concert Search">
+            <img src= "http://images.jambase.com/logos/jambase140x70.gif" alt="Search JamBase Concerts" border="0"/></a>
+            </div>
+            <span id="debug"></span>
+        </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+﻿@model LiveMusicFriend.Models.Event
+
+<div class="fluid-row artist-group">
+    <div class="venue">
+        <span class="venue_name"><a target="_blank" href="http://maps.google.com/?q=@Html.DisplayFor(model => model.Venue.Name) @Html.DisplayFor(model => model.Venue.City) @Html.DisplayFor(model => model.Venue.State)">@@ @Html.DisplayFor(model => model.Venue.Name) - @Html.DisplayFor(model => model.Venue.City) - @Html.DisplayFor(model => model.Venue.State)</a></span> 
+        <span class="event_date">@Model.EventDate.Value.ToShortDateString()</span>
+    </div>
+        
+    <div style="clear: both"></div>
+    @foreach (var item in Model.ArtistList){
+        <span class="artist_name">@Html.ActionLink(item.ArtistName, "search/artist/" + item.ArtistName)</span>
+    }
+</div>
+

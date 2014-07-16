@@ -1,0 +1,95 @@
+﻿@model LiveMusicFriend.Models.Search
+@{
+    var results = (LiveMusicFriend.Models.Search)ViewData["search"];
+}
+<script type="text/javascript">
+    var geo;
+
+    $(function () {
+        $("#startDate").datepicker();
+        $("#endDate").datepicker();
+    });
+
+    function fillZip() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(getZip);
+        }
+        return false;
+    }
+
+    function getZip(position) {
+        var lat = position.coords.latitude;
+        var long = position.coords.longitude;
+        var strUrl = "http://where.yahooapis.com/geocode?q=" + lat + ",+" + long + "&gflags=R"
+        var results = $.ajax({
+            type: "GET",
+            url: strUrl,
+            dataType: "xml",
+            success: function (xml) {
+                var result = $(xml).find('uzip');
+                $('#zip').val(result.text());
+                /*result.text());*/
+            }
+        });
+    }
+
+    $('[placeholder]').focus(function () {
+        var input = $(this);
+        if (input.val() == input.attr('placeholder')) {
+            input.val('');
+            input.removeClass('placeholder');
+        }
+    }).blur(function () {
+        var input = $(this);
+        if (input.val() == '' || input.val() == input.attr('placeholder')) {
+            input.addClass('placeholder');
+            input.val(input.attr('placeholder'));
+        }
+    }).blur();
+    $('[placeholder]').parents('form').submit(function () {
+        $(this).find('[placeholder]').each(function () {
+            var input = $(this);
+            if (input.val() == input.attr('placeholder')) {
+                input.val('');
+            }
+        })
+    });
+
+</script>
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper" style="padding-top: 20px;">
+
+
+@using (Html.BeginForm("search", "Search", FormMethod.Post, new {@class="box form-inline span3_5 center" }))
+{
+    <h2 style="margin-left: 15px;" class="text-shadow gray">CONCERT SEARCH</h2>
+    @Html.ValidationSummary(true)
+            <div class="span3">
+                @Html.TextBoxFor(model => model.zip, new { @class = "input-mid-mini ", @placeholder = "Zip Code" })
+                <input type="submit" value="" class="nav_button" onclick="return fillZip();" title="Get your zipcode"/>
+                @Html.TextBoxFor(model => model.radius, new { @class = "input-mid-mini ", @placeholder = "Radius" })
+                @Html.ValidationMessageFor(model => model.zip)
+                @Html.ValidationMessageFor(model => model.radius)
+            </div>
+            <div class="span3">
+                @Html.TextBoxFor(model => model.band, new {@class="input-large", @placeholder="Band Name"})
+                @Html.ValidationMessageFor(model => model.band)
+            </div>
+            <div class="span3">
+                @Html.TextBoxFor(model => model.startDate, new {@placeholder="Start Date", @class="input-small"})
+                @Html.ValidationMessageFor(model => model.startDate)
+                @Html.TextBoxFor(model => model.endDate, new {@placeholder="End Date", @class="input-small" })
+                @Html.ValidationMessageFor(model => model.endDate)
+            </div>
+        <div class="control-group">
+                <input type="submit" value="Search" class="grad_button"/>
+        </div>
+}       </div>
+    </section>
+}
+
+@foreach (var item in results.EventList)
+{
+    @Html.Partial("_EventTile", item)
+}

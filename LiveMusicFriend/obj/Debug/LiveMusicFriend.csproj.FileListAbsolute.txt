@@ -1,0 +1,107 @@
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\LiveMusicFriend.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\LiveMusicFriend.pdb
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\Antlr3.Runtime.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.AspNet.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.Core.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.OAuth.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.OpenId.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\EntityFramework.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\Microsoft.Web.Infrastructure.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\Newtonsoft.Json.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Net.Http.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Net.Http.Formatting.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Net.Http.WebRequest.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Helpers.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Http.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Http.WebHost.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Mvc.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Optimization.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Razor.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.WebPages.Deployment.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.WebPages.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.WebPages.Razor.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\WebGrease.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\WebMatrix.Data.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\WebMatrix.WebData.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\EntityFramework.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\Newtonsoft.Json.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Net.Http.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Net.Http.Formatting.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Net.Http.WebRequest.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Helpers.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Http.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Http.WebHost.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Mvc.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Razor.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.WebPages.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.WebPages.Deployment.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.WebPages.Razor.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\WebMatrix.Data.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\WebMatrix.WebData.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.AspNet.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.Core.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.OAuth.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.OpenId.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\obj\Debug\ResolveAssemblyReference.cache
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\obj\Debug\LiveMusicFriend.dll
+D:\projects\My Dropbox\projects\LiveMusicFriend\LiveMusicFriend\obj\Debug\LiveMusicFriend.pdb
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\obj\Debug\LiveMusicFriend.csprojResolveAssemblyReference.cache
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\obj\Debug\LiveMusicFriend.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\obj\Debug\LiveMusicFriend.pdb
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\LiveMusicFriend.dll.config
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\LiveMusicFriend.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\LiveMusicFriend.pdb
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\Antlr3.Runtime.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.AspNet.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.Core.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.OAuth.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.OpenId.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\EntityFramework.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\Microsoft.Web.Infrastructure.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\Newtonsoft.Json.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Net.Http.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Net.Http.Formatting.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Net.Http.WebRequest.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Helpers.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Http.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Http.WebHost.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Mvc.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Optimization.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Razor.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.WebPages.Deployment.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.WebPages.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.WebPages.Razor.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\WebGrease.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\WebMatrix.Data.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\WebMatrix.WebData.dll
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\EntityFramework.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\Newtonsoft.Json.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Net.Http.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Net.Http.Formatting.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Net.Http.WebRequest.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Helpers.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Http.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Http.WebHost.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Mvc.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.Razor.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.WebPages.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.WebPages.Deployment.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\System.Web.WebPages.Razor.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\WebMatrix.Data.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\WebMatrix.WebData.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.AspNet.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.Core.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.OAuth.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.OpenId.xml
+C:\Dropbox\projects\LiveMusicFriend\LiveMusicFriend\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
