@@ -14,8 +14,8 @@ namespace LiveMusicFriend.Models
             EventList = new List<Event>();
         }
 
-        public string band { get; set; }
-        public int? bandid { get; set; }
+        public string artist { get; set; }
+        public int? artistid { get; set; }
         public string User { get; set; }
         public string apiKey { get; set; }
         public int? zip { get; set; }

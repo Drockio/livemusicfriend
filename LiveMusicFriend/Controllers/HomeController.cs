@@ -69,7 +69,7 @@ namespace LiveMusicFriend.Controllers
             Models.Search search = new Models.Search();
             if (type != null && target != null && type.ToLower() == "artist")
             {
-                search.band = target;
+                search.artist = target;
                 Models.Jambase jb = new Models.Jambase(search);
                 search = jb.getRest();
             }
@@ -81,6 +81,11 @@ namespace LiveMusicFriend.Controllers
         [HttpPost]
         public ActionResult Search(LiveMusicFriend.Models.Search search)
         {
+            if (!string.IsNullOrEmpty(search.artist))
+            {
+                Models.Jambase artistSearch = new Models.Jambase(search);
+                search.artistid = artistSearch.getArtistId();
+            }
             Models.Jambase jb = new Models.Jambase(search);
             search = jb.getRest();
             ViewData.Add("search", search);
