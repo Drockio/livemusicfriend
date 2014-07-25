@@ -18,90 +18,20 @@ namespace LiveMusicFriend.Models
     public class Jambase
     {
         public Uri Uri { get; set; }
-        public string ApiKey = ConfigurationManager.AppSettings["API_KEY"];
+        static public string ApiKey = ConfigurationManager.AppSettings["API_KEY"];
         const string System = "JamBase";
-        string BaseURL = "http://api.jambase.com/";
+        static string BaseURL = "http://api.jambase.com/";
         public Search SearchResults {get; set;}
 
-        public Jambase(Search SearchInfo){
-            string band = SearchInfo.artist;
-
-            string _baseURL = "";
-            if (!string.IsNullOrEmpty(band) && !string.IsNullOrEmpty(SearchInfo.artistid.ToString()))
-            {
-                _baseURL = BaseURL + "artists";
-            }
-            else
-            {
-                _baseURL = BaseURL + "events";
-            }
-
-            SearchResults = SearchInfo;
-            SearchResults.EventList = new List<Event>();
-            StringBuilder sb = new StringBuilder(_baseURL);
-            sb.AddQueryParam("api_key", ApiKey);
-            sb.AddQueryParam("name", band);
-            sb.AddQueryParam("artistId", SearchResults.artistid.ToString());
-            sb.AddQueryParam("endDate", SearchResults.endDate);
-            sb.AddQueryParam("startDate", SearchResults.startDate);
-            sb.AddQueryParam("user", SearchResults.User);
-            sb.AddQueryParam("zipCode", SearchResults.zip.ToString());
-            sb.AddQueryParam("radius", SearchResults.radius.ToString());
-            sb.AddQueryParam("page", "0");
-            sb.AddQueryParam("o", "xml");
-
-            Uri = new Uri(sb.ToString());
-        }
-
-        public XElement GetViaWebRequest(Uri Uri)
+        public static List<Event> ParseEventResults(XElement searchResults)
         {
-            XElement xel = null;
-            WebRequest request = WebRequest.Create(Uri);
-            request.Method = "GET";
-            try
+            //parse results
+            List<Event> myEvents = new List<Event>();
+
+            if (searchResults != null)
             {
-                using (WebResponse response = request.GetResponse())
-                using (Stream stream = response.GetResponseStream())
-                {
-                    xel = XElement.Load(stream);
-                }
-            }
-            catch (Exception e)
-            {
-
-            }
-            return xel;
-        }
-
-        public int? getArtistId()
-        {
-            XElement xel = null;
-
-            xel = GetViaWebRequest(Uri);
-
-            if (xel != null)
-            {
-                string node = xel.XPathSelectElement("Artists/Id").Value;
-                int? result = Utility.GetInt(node);
-                return result;
-            }
-            else
-                return null;
-        }
-
-        public Search getRest()
-        {
-
-            XElement xel = null;
-
-            xel = GetViaWebRequest(Uri);
-
-            if (xel != null)
-            {
-                var eventNodes = xel.Descendants("Events");
-
-                List<Event> myEvents = new List<Event>();
-
+                var eventNodes = searchResults.Descendants("Events");
+                
                 foreach (XElement xEvent in eventNodes)
                 {
                     Event myEvent = new Event(System);
@@ -130,10 +60,89 @@ namespace LiveMusicFriend.Models
 
                     myEvents.Add(myEvent);
                 }
-
-                this.SearchResults.EventList = myEvents;
             }
-            return SearchResults;
+            return myEvents;
+        }
+
+        public static List<Event> getPerformancesByZipCode(Search searchInfo)
+        {
+            //generate url
+            //http://api.jambase.com/events?zipCode=95128&radius=50&startDate=2014-07-24&endDate=2014-08-24&page=0&api_key=8BDB5EXNPXANZYMMKQYXE3Y8
+            var url = new StringBuilder(BaseURL + "events");
+            url.AddQueryParam("endDate", searchInfo.endDate);
+            url.AddQueryParam("startDate", searchInfo.startDate);
+            url.AddQueryParam("zipCode", searchInfo.zip.ToString());
+            url.AddQueryParam("radius", searchInfo.radius.ToString());
+            url.AddQueryParam("page", "0");
+            url.AddQueryParam("o", "xml");
+            url.AddQueryParam("api_key", ApiKey);
+
+            //make web request
+            var searchResults = GetXMLFromWebRequest(new Uri(url.ToString()));
+
+            return ParseEventResults(searchResults);
+        }
+
+        public static List<Event> GetPerformancesByArtist(Search searchInfo)
+        {
+            //get artistId
+            int? artistId = GetArtistID(searchInfo.artist);
+
+            var url = new StringBuilder(BaseURL + "events");
+            url.AddQueryParam("endDate", searchInfo.endDate);
+            url.AddQueryParam("startDate", searchInfo.startDate);
+            url.AddQueryParam("zipCode", searchInfo.zip.ToString());
+            url.AddQueryParam("radius", searchInfo.radius.ToString());
+            url.AddQueryParam("page", "0");
+            url.AddQueryParam("o", "xml");
+            url.AddQueryParam("api_key", ApiKey);
+            url.AddQueryParam("artistId", artistId.ToString());
+
+            //make web request for performances
+            var searchResults = GetXMLFromWebRequest(new Uri(url.ToString()));
+            return ParseEventResults(searchResults);
+        }
+
+        private static int? GetArtistID(string artistName)
+        {
+            //http://api.jambase.com/artists?name=Horse+Feathers&page=0&api_key=8BDB5EXNPXANZYMMKQYXE3Y8
+            var url = new StringBuilder(BaseURL + "artists");
+            url.AddQueryParam("page", "0");
+            url.AddQueryParam("o", "xml");
+            url.AddQueryParam("api_key", ApiKey);
+            url.AddQueryParam("name", artistName);
+
+            var artistResults = GetXMLFromWebRequest(new Uri(url.ToString()));
+
+            if (artistResults != null)
+            {
+                int? artistId = Utility.GetInt(artistResults.XPathSelectElement("Artists/Id").Value);
+                return artistId;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        private static XElement GetXMLFromWebRequest(Uri Uri)
+        {
+            XElement xel = null;
+            WebRequest request = WebRequest.Create(Uri);
+            request.Method = "GET";
+            try
+            {
+                using (WebResponse response = request.GetResponse())
+                using (Stream stream = response.GetResponseStream())
+                {
+                    xel = XElement.Load(stream);
+                }
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+            return xel;
         }
     }
 }

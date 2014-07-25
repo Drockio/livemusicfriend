@@ -27,15 +27,15 @@ namespace LiveMusicFriend.Controllers
             return View("Search");
         }
 
-        [HttpPost]
-        public ActionResult Index(LiveMusicFriend.Models.Search search)
-        {
-            Models.Jambase jb = new Models.Jambase(search);
-            search = jb.getRest();
-            ViewData.Add("search", search);
+        //[HttpPost]
+        //public ActionResult Index(LiveMusicFriend.Models.Search search)
+        //{
+        //    Models.Jambase jb = new Models.Jambase(search);
+        //    search = jb.getRest();
+        //    ViewData.Add("search", search);
 
-            return View("Search");
-        }
+        //    return View("Search");
+        //}
 
         public ActionResult About()
         {
@@ -66,12 +66,11 @@ namespace LiveMusicFriend.Controllers
         [HttpGet]
         public ActionResult Search(string type, string target)
         {
-            Models.Search search = new Models.Search();
+            var search = new Models.Search();
             if (type != null && target != null && type.ToLower() == "artist")
             {
                 search.artist = target;
-                Models.Jambase jb = new Models.Jambase(search);
-                search = jb.getRest();
+                search.EventList = Models.Jambase.GetPerformancesByArtist(search);
             }
             ViewData.Add("search", search);
 
@@ -83,11 +82,14 @@ namespace LiveMusicFriend.Controllers
         {
             if (!string.IsNullOrEmpty(search.artist))
             {
-                Models.Jambase artistSearch = new Models.Jambase(search);
-                search.artistid = artistSearch.getArtistId();
+                search.EventList = Models.Jambase.GetPerformancesByArtist(search);
             }
-            Models.Jambase jb = new Models.Jambase(search);
-            search = jb.getRest();
+            else if (!string.IsNullOrEmpty(search.zip.ToString()))
+            {
+                search.EventList = Models.Jambase.getPerformancesByZipCode(search);
+            }
+            //Models.Jambase jb = new Models.Jambase(search);
+            //search = jb.getRest();
             ViewData.Add("search", search);
 
             return View();
